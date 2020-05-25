@@ -4,11 +4,11 @@ import { Application, Request, Response } from 'express';
 
 import { join } from 'path';
 
-import router from './controllers';
-
 import * as cookieParser from 'cookie-parser';
 
 import * as compression from 'compression';
+
+import router from './controllers';
 
 const app: Application = express();
 
@@ -25,10 +25,6 @@ app.use(cookieParser());
 
 app.use(express.static(join(__dirname, '..', 'client', 'build')));
 app.use(router);
-
-app.get('/', (req: Request, res: Response) => {
-	res.status(200).send('Hi');
-});
 
 app.get('*', (req: Request, res: Response) => {
 	res.sendFile(join(__dirname, '..', 'client', 'build', 'index.html'));
