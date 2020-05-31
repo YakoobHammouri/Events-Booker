@@ -37,7 +37,8 @@
 				"ts": "never",
 				"tsx": "never"
 			}
-		]
+		],
+		"object-curly-newline": ["off", "always"]
 	},
 	"settings": {
 		"import/resolver": {
