@@ -1,7 +1,6 @@
 BEGIN;
 
-    DROP TABLE IF EXISTS users, events, userEvent, category
-    cascade;
+    DROP TABLE IF EXISTS users, events, userEvent, category cascade;
 
 
 -- Add Jerusalem Time Zone

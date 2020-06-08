@@ -2,16 +2,17 @@ import { Pool } from 'pg';
 
 import * as dotenv from 'dotenv';
 
-import logger from '../config/logger';
+import logger from '../helpers/logger';
 
 dotenv.config();
-
 const connectionString = process.env.DATABASE_URL;
 
 if (!connectionString) {
-	logger.log('error', `The Db Connection not Found ${connectionString}`);
+	logger.info(`The Db Connection not Found ${connectionString}`);
 	throw new Error('Db Connection not Found');
 }
+
+logger.info(connectionString);
 
 const option = {
 	connectionString,

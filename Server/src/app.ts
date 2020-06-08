@@ -8,7 +8,7 @@ import * as cookieParser from 'cookie-parser';
 
 import * as compression from 'compression';
 
-import router from './controllers';
+//import router from './controllers';
 
 const app: Application = express();
 
@@ -24,7 +24,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use(express.static(join(__dirname, '..', 'client', 'build')));
-app.use(router);
+
+// app.use(router);
+
+// app.get('/', (req: Request, res: Response) => {
+// 	looger.error('Error at Home ');
+// 	res.send('Hi');
+// });
 
 app.get('*', (req: Request, res: Response) => {
 	res.sendFile(join(__dirname, '..', '..', 'client', 'build', 'index.html'));

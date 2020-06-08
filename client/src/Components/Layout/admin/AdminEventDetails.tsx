@@ -10,8 +10,8 @@ import { AxiosResponse, AxiosError } from 'axios';
 import LoaderProgress from '../../Common/LoaderProgress';
 import EventMembers from './EventMembers/EventMembers';
 
-import UserInfoEventInfoType from '../../../Class/UserInfoEventInfoType';
-import EventsType from '../../../Class/EventsType';
+import UserInfoEventInfoType from '../../../../../Server/src/Class/UserInfoEventInfoType';
+import EventsType from '../../../../../Server/src/Class/EventsType';
 
 const useStyles = (theme: Theme) =>
 	createStyles({

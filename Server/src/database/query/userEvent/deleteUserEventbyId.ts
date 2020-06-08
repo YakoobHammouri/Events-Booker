@@ -1,7 +1,9 @@
 import { QueryResult } from 'pg';
 import connection from '../../connection';
 
-export default (id: number): Promise<QueryResult> => {
+import UserEventType from '../../../Class/UserEventType';
+
+export default (id: number): Promise<QueryResult<UserEventType>> => {
 	const sql = {
 		text: 'delete FROM userEvent where id = $1;',
 		values: [id],

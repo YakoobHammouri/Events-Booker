@@ -1,0 +1,2 @@
+run Tape in typescript 
+https://riptutorial.com/typescript/example/26947/tape

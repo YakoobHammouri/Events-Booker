@@ -2,7 +2,9 @@ import { QueryResult } from 'pg';
 
 import connection from '../../connection';
 
-export default (userId: string): Promise<QueryResult> => {
+import UserInfoEventInfoType from '../../../Class/UserInfoEventInfoType';
+
+export default (userId: string): Promise<QueryResult<UserInfoEventInfoType>> => {
 	const sql = {
 		text: `SELECT events.title , events.event_date , events.event_time ,events.event_status ,
               events.gid , userEvent.code , userEvent.attendance_status ,userEvent.note 

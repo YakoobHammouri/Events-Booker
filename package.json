@@ -7,6 +7,7 @@
     "@types/bcrypt": "^3.0.0",
     "@types/hapi__joi": "^17.1.0",
     "@types/js-cookie": "^2.2.6",
+    "@types/jsonwebtoken": "^8.5.0",
     "@types/pg": "^7.14.3",
     "@types/uuid": "^8.0.0",
     "@types/xregexp": "^4.3.0",
@@ -39,6 +40,7 @@
     "@types/nodemailer": "^6.4.0",
     "@types/passport": "^1.0.3",
     "@types/passport-local": "^1.0.33",
+    "@types/tape": "^4.13.0",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@typescript-eslint/parser": "^2.34.0",
     "concurrently": "^5.2.0",
@@ -52,17 +54,21 @@
     "eslint-plugin-react-hooks": "^4.0.2",
     "nodemon": "^2.0.2",
     "prettier": "^1.19.1",
-    "ts-node": "^8.10.1",
+    "tap-spec": "^5.0.0",
+    "tape": "^5.0.1",
+    "ts-node": "^8.10.2",
     "typescript": "^3.9.2"
   },
   "scripts": {
+    "test": "ts-node node_modules/tape/bin/tape server/src/tests/*.ts | tap-spec",
     "start": "node server/js/server.js",
     "build": "tsc -p ./server",
     "server": "nodemon server/src/server.ts",
     "client": "cd client && npm start",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "lint": "eslint ./server --ext .ts",
-    "lint-fix": "eslint ./server --ext .ts --fix"
+    "lint-fix": "eslint ./server --ext .ts --fix",
+    "db": "node Server/js/config/Db/runSqlBuilder.js"
   },
   "repository": {
     "type": "git",

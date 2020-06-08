@@ -20,6 +20,7 @@
 	},
 	"plugins": ["@typescript-eslint", "prettier"],
 	"rules": {
+		"consistent-return": "off",
 		"prettier/prettier": ["error"],
 		"no-unused-vars": "warn",
 		"no-console": "warn",
@@ -27,7 +28,7 @@
 		"indent": ["off", 1],
 		"implicit-arrow-linebreak": ["off", "below"],
 		"function-paren-newline": ["off", "never"],
-		"no-duplicate-imports": ["error", { "includeExports": true }],
+		"no-duplicate-imports": ["off", { "includeExports": true }],
 		"import/extensions": [
 			"off",
 			"ignorePackages",
@@ -38,7 +39,8 @@
 				"tsx": "never"
 			}
 		],
-		"object-curly-newline": ["off", "always"]
+		"object-curly-newline": ["off", "always"],
+		"import/no-extraneous-dependencies": ["off", { "devDependencies": ["**/*.test.js", "**/*.spec.js"] }]
 	},
 	"settings": {
 		"import/resolver": {

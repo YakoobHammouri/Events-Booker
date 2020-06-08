@@ -1,10 +1,14 @@
 import { QueryResult } from 'pg';
 import connection from '../../connection';
-
+import EventsType from '../../../Class/EventsType';
 // update attendance_cnt , member_cnt
 // if isAttendance === true then we need to update the attendance_cnt,
 // otherWise update 'member_cnt'
-export default (eventId: string, count: string, isAttendance: string): Promise<QueryResult> => {
+export default (
+	eventId: string,
+	count: string,
+	isAttendance: string,
+): Promise<QueryResult<EventsType>> => {
 	const columeName = isAttendance ? 'attendance_cnt' : 'member_cnt';
 
 	const sql = {

@@ -9,9 +9,9 @@ import UserInfoDialog from './UserInfoDialog';
 import EventMembers from '../EventMembers/EventMembers';
 import AttendanceStyle from './Style';
 import axios, { AxiosResponse, AxiosError } from 'axios';
-import UserInfoEventInfoType from '../../../../Class/UserInfoEventInfoType';
-import UsersType from '../../../../Class/UsersType';
-import EventsType from '../../../../Class/EventsType';
+import UserInfoEventInfoType from '../../../../../../../Class/UserInfoEventInfoType';
+import UsersType from '../../../../../../../Class/UsersType';
+import EventsType from '../../../../../../../Class/EventsType';
 
 export interface IState extends RouteComponentProps<any> {
 	tabIndex: number;

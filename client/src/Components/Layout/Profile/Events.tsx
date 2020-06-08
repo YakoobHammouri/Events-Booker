@@ -17,7 +17,7 @@ import clsx from 'clsx';
 
 import eventStyle from './ProfileStyles';
 
-import UserInfoEventInfoType from '../../../Class/UserInfoEventInfoType';
+import UserInfoEventInfoType from '../../../../../Server/src/Class/UserInfoEventInfoType';
 
 export interface IProps {
 	events: UserInfoEventInfoType[];

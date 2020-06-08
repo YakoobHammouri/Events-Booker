@@ -2,9 +2,9 @@ import * as joi from '@hapi/joi';
 
 import * as XRegExp from 'xregexp';
 
-import UsersType from '../Class/UsersType';
+import SignupTyps from '../Class/SignupTyps';
 
-const registrationValidation = (data: UsersType): joi.ValidationResult => {
+const registrationValidation = (data: SignupTyps): joi.ValidationResult => {
 	const schema = joi
 		.object({
 			name: joi
@@ -64,9 +64,4 @@ const V4UUIDValidation = (uuid: string): boolean => {
 	return uuidV4Regex.test(uuid);
 };
 
-module.exports = {
-	registrationValidation,
-	logInValidation,
-	V4UUIDValidation,
-	emilValidation,
-};
+export { registrationValidation, logInValidation, V4UUIDValidation, emilValidation };

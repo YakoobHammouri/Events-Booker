@@ -2,11 +2,13 @@ import { v4 as uuidv4 } from 'uuid';
 
 import { QueryResult } from 'pg';
 
-import logger from '../../../config/logger';
+import logger from '../../../helpers/logger';
 
 import connection from '../../connection';
 
 import { EVENTSTATUS } from '../../../helpers/Constants';
+
+import EventsType from '../../../Class/EventsType';
 
 export interface EventObject {
 	title: string;
@@ -18,7 +20,7 @@ export interface EventObject {
 	host: string;
 }
 
-export default (eventDetails: EventObject): Promise<QueryResult> => {
+export default (eventDetails: EventObject): Promise<QueryResult<EventsType>> => {
 	const {
 		title,
 		categoryId,

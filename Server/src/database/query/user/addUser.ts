@@ -2,23 +2,16 @@ import * as bcrypt from 'bcrypt';
 
 import { v4 as uuidv4 } from 'uuid';
 
-import logger from '../../../config/logger';
+import logger from '../../../helpers/logger';
 
 import connection from '../../connection';
 
 import { ROLE } from '../../../helpers/Constants';
 
+import Iuser from '../../../Class/SignupTyps';
+
 export interface IcallBack {
 	(err: null | Error, result: null | string): void;
-}
-
-export interface Iuser {
-	name: string;
-	phone: string;
-	email: string;
-	password: string;
-	birthDate: Date;
-	role?: string;
 }
 
 export default (userDetails: Iuser, callback: IcallBack): string | IcallBack | null => {
@@ -32,18 +25,7 @@ export default (userDetails: Iuser, callback: IcallBack): string | IcallBack | n
 			const sql = {
 				text:
 					'INSERT INTO USERS  (gid, user_name, phone, birth_date, email, university, address, role, profession, password) VALUES ($1, $2, $3, $4,$5,$6,$7,$8,$9,$10)',
-				values: [
-					gid,
-					name,
-					phone,
-					birthDate,
-					email,
-					'Unknown',
-					'Unknown',
-					role,
-					'Unknown',
-					passwordHash,
-				],
+				values: [gid, name, phone, birthDate, email, 'Unknown', 'Unknown', role, 'Unknown', passwordHash],
 			};
 
 			connection

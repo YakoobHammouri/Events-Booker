@@ -11,7 +11,7 @@ import {
 } from '@material-ui/icons';
 import userInfoStyle from './ProfileStyles';
 
-import UsersType from '../../../Class/UsersType';
+import UsersType from '../../../../../Server/src/Class/UsersType';
 
 export interface IProps {
 	userInfo: UsersType;

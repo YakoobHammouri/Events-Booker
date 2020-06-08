@@ -17,8 +17,8 @@ import {
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 
-import MenuType from '../../../Class/MenuType';
-import Anchor from '../../../Class/Anchor';
+import MenuType from '../../../../../Server/src/Class/MenuType';
+import Anchor from '../../../../../Server/src/Class/Anchor';
 
 export interface IState {
 	right?: boolean;

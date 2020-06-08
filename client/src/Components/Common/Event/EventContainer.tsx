@@ -10,7 +10,7 @@ import EventCard from './EventCard';
 import IndexTabProps from '../../../helpers/IndexTabProps';
 import { AxiosResponse, AxiosError } from 'axios';
 
-import CategoryEventsType from '../../../Class/CategoryEventsType';
+import CategoryEventsType from '../../../../../Server/src/Class/CategoryEventsType';
 const useStyles = (theme: Theme) =>
 	createStyles({
 		root: {

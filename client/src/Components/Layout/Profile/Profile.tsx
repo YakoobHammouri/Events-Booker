@@ -11,8 +11,8 @@ import UserInfo from './UserInfo';
 
 import Events from './Events';
 
-import UserInfoEventInfoType from '../../../Class/UserInfoEventInfoType';
-import UsersType from '../../../Class/UsersType';
+import UserInfoEventInfoType from '../../../../../Server/src/Class/UserInfoEventInfoType';
+import UsersType from '../../../../../Server/src/Class/UsersType';
 
 const ProfileStyles = (theme: Theme) =>
 	createStyles({
