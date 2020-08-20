@@ -11,7 +11,7 @@
     "@types/uuid": "^8.0.0",
     "@types/xregexp": "^4.3.0",
     "async": "^3.2.0",
-    "bcrypt": "^4.0.1",
+    "bcrypt": "^5.0.0",
     "compression": "^1.7.4",
     "cookie": "^0.4.1",
     "cookie-parser": "^1.4.4",
